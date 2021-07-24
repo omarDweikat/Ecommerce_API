@@ -1,0 +1,5 @@
+C:\Users\LENOVO\Desktop\Ecommerce_API\obj\Debug\netcoreapp3.1\Ecommerce_API.csprojAssemblyReference.cache
+C:\Users\LENOVO\Desktop\Ecommerce_API\obj\Debug\netcoreapp3.1\Ecommerce_API.AssemblyInfoInputs.cache
+C:\Users\LENOVO\Desktop\Ecommerce_API\obj\Debug\netcoreapp3.1\Ecommerce_API.AssemblyInfo.cs
+C:\Users\LENOVO\Desktop\Ecommerce_API\obj\Debug\netcoreapp3.1\Ecommerce_API.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Desktop\Ecommerce_API\obj\Debug\netcoreapp3.1\Ecommerce_API.MvcApplicationPartsAssemblyInfo.cache

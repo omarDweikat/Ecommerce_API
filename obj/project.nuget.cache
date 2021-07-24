@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "J1buzeGwtBTj0UElHYC7TRfBRN9KMzMGgqOuff9bApe4yapv8Zhmf2BrWu39YE/CAZ4ZzIMhQwDFWrs8pdqKkA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\LENOVO\\Desktop\\Ecommerce_API\\Ecommerce_API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\LENOVO\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\dapper\\2.0.90\\dapper.2.0.90.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\system.reflection.emit.lightweight\\4.7.0\\system.reflection.emit.lightweight.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}
