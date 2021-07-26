@@ -5,7 +5,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace api.Utilities
+namespace Ecommerce_API.Utilities
 {
     public static class StringUtil
     {

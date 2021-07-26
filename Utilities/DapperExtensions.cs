@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Dapper;
 
-namespace api.Utilities
+namespace Ecommerce_API.Utilities
 {
     public static class DapperExtensions
     {

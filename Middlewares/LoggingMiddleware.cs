@@ -2,11 +2,10 @@ using System;
 using System.Diagnostics;
 using System.Net;
 using System.Threading.Tasks;
-using api.Utilities;
+using Ecommerce_API.Utilities;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
-
-namespace api.Middlewares
+namespace Ecommerce_API.Middlewares
 {
     public class LoggingMiddleware
     {
@@ -39,7 +38,7 @@ namespace api.Middlewares
                 return;
             var currentUser = context.CurrentUser();
             var version = context.Request.Headers["VClient"];
-            var user = currentUser == null ? "" : currentUser.Id + "";
+            var user = currentUser == null ? "" : currentUser.ID + "";
             var method = context.Request.Method;
             var path = context.Request.Path.ToString();
             Serilog.Log.Information($"U{user} {version} {method} {path} {ms}ms");
@@ -49,7 +48,7 @@ namespace api.Middlewares
         {
             var currentUser = context.CurrentUser();
             var version = context.Request.Headers["VClient"];
-            var user = currentUser == null ? "" : currentUser.Id + "";
+            var user = currentUser == null ? "" : currentUser.ID + "";
             var method = context.Request.Method;
             var path = context.Request.Path.ToString();
             Serilog.Log.Error($"U{user} {version} {method} {path} {ms}ms " + exception.Demystify());

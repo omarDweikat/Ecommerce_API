@@ -1,11 +1,9 @@
 using System.Threading.Tasks;
-using api.Utilities;
-using api.Features;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace api.Features.User
+namespace Ecommerce_API.Features.Users
 {
     [Route("api/user")]
     public class UserController : ControllerBase

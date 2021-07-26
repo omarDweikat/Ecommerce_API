@@ -1,12 +1,12 @@
 using System.IO;
 using Newtonsoft.Json;
 
-namespace api
+namespace Ecommerce_API
 {
     public class Config
     {
         private const string FILE_NAME = "api.config.json";
-        public string ConnectionString { get; set; }
+        public string DBConnectionString { get; set; }
 
         private static Config _config = null;
 

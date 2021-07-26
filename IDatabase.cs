@@ -1,6 +1,6 @@
 using System.Data;
 
-namespace api.Database
+namespace Ecommerce_API.Database
 {
     public interface IDatabase
     {

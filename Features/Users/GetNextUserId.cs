@@ -3,9 +3,9 @@ using MediatR;
 using System.Data;
 using System.Threading;
 using System.Threading.Tasks;
-using api.Database;
+using Ecommerce_API.Database;
 
-namespace CRMApi.Features.User
+namespace Ecommerce_API.Features.Users
 {
     public class GetNextUserId
     {

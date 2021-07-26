@@ -1,10 +1,10 @@
 using System.IO;
 using System.Threading.Tasks;
-using api.Models.Users;
+using Ecommerce_API.Models.Users;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Filters;
 
-namespace api.Utilities
+namespace Ecommerce_API.Utilities
 {
     public static class HttpContextExtensions
     {

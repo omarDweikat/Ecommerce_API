@@ -2,20 +2,17 @@ using System.Linq;
 using Microsoft.AspNetCore.Http;
 using Task = System.Threading.Tasks.Task;
 using Newtonsoft.Json;
-using api.Utilities;
+using Ecommerce_API.Utilities;
 
-namespace api.Middlewares
+namespace Ecommerce_API.Middlewares
 {
     public class VersionMiddleware
     {
         private readonly RequestDelegate _next;
-        const int MINIMUM_CODE = 119;
+        const int MINIMUM_CODE = 1;
         private static string[] WhitelistEndpoints = new[]
         {
             "/api/update",
-            "/api/task/sharedrecord",
-            "/api/keytransfer",
-            "/api/p",
         };
 
         public VersionMiddleware(RequestDelegate next)

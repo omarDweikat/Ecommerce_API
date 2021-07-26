@@ -1,7 +1,7 @@
 using System.Data;
 using System.Data.SqlClient;
 
-namespace api.Database
+namespace Ecommerce_API.Database
 {
     public class Database : IDatabase
     {
