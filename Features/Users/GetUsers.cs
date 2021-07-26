@@ -38,12 +38,12 @@ namespace Ecommerce_API.Features.Users
 
                 if (request.Status != 0)
                 {
-                    getUsersQuery += " WHERE u.Status=@Status";
+                    getUsersQuery += " WHERE Status=@Status";
                     if (request.Id > 0)
-                        getUsersQuery += " AND u.id=@Id";
+                        getUsersQuery += " AND id=@Id";
                 }
                 else if (request.Id > 0)
-                    getUsersQuery += " WHERE u.id=@Id";
+                    getUsersQuery += " WHERE id=@Id";
 
                 var users = await db.QueryAsync<User>(getUsersQuery, request);
                 return users;
