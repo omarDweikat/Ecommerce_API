@@ -46,6 +46,7 @@ namespace Ecommerce_API.Features.Users
                     getUsersQuery += " WHERE id=@Id";
 
                 var users = await db.QueryAsync<User>(getUsersQuery, request);
+
                 
                 return users;
             }
