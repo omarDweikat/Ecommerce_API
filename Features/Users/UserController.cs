@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Ecommerce_API.Features.Users
 {
-    [Route("api/user")]
+    [Route("api/admin")]
     public class UserController : ControllerBase
     {
         private readonly IMediator _mediator;
