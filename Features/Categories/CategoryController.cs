@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Ecommerce_API.Features.Categories
 {
-    [Route("api/categories")]
+    [Route("api/category")]
     public class CategoryController : ControllerBase
     {
         private readonly IMediator _mediator;
