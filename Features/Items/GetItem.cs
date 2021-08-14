@@ -12,18 +12,18 @@ namespace Ecommerce_API.Features.Items
     public class GetItem
     {
 
-        public class Query : IRequest<IEnumerable<Item>>
+        public class Query : IRequest<IEnumerable<GalleryItem>>
         {
             public int Status { get; set; }
             public int Id { get; set; }
         }
 
-        public class QueryHandler : IRequestHandler<Query, IEnumerable<Item>>
+        public class QueryHandler : IRequestHandler<Query, IEnumerable<GalleryItem>>
         {
             IDatabase _db;
             public QueryHandler(IDatabase db) => _db = db;
 
-            public async Task<IEnumerable<Item>> Handle(Query request, CancellationToken cancellationToken)
+            public async Task<IEnumerable<GalleryItem>> Handle(Query request, CancellationToken cancellationToken)
             {
                 using (var db = _db.Open())
                 {
@@ -31,20 +31,12 @@ namespace Ecommerce_API.Features.Items
                     return Items;
                 }
             }
-            public async Task<IEnumerable<Item>> GetItem(IDbConnection db, Query request)
+            public async Task<IEnumerable<GalleryItem>> GetItem(IDbConnection db, Query request)
             {
-                string getcategoriesQuery = @"SELECT * FROM Items ";
+                string getcategoriesQuery = @"select Items.*,Images.Filename from Items  
+                        Left join Images ON Items.Id=Images.ItemID AND Images.cover = 1 WHERE Items.ID=Images.ItemID AND Items.ID=@Id";
 
-                if (request.Status != 0)
-                {
-                    getcategoriesQuery += " WHERE Status=@Status";
-                    if (request.Id > 0)
-                        getcategoriesQuery += " AND id=@Id";
-                }
-                else if (request.Id > 0)
-                    getcategoriesQuery += " WHERE id=@Id";
-
-                var categories = await db.QueryAsync<Item>(getcategoriesQuery, request);
+                var categories = await db.QueryAsync<GalleryItem>(getcategoriesQuery, request);
                 return categories;
             }
         }
