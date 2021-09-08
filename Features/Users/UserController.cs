@@ -38,7 +38,7 @@ namespace Ecommerce_API.Features.Users
             return Ok(result);
         }
 
-        [HttpPost]
+        [HttpPost("AddUser")]
         public async Task<IActionResult> AddUser([FromBody] AddUser.Command command)
         {
             var result = await _mediator.Send(command);

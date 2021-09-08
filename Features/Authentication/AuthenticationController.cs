@@ -19,9 +19,14 @@ namespace Ecommerce_API.Features.Authentication
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] Login.Command command)
         {
+           
             var user = await _mediator.Send(command);
+           
             if (user == null)
-                return BadRequest(new { Error = "اسم المستخدم او كلمة المرور غير صحيحة" });
+                return BadRequest(new { Error = "اسم المستخدم او كلمة المرور غير صحيحة" }
+                
+                );
+               
 
             return Ok(user);
         }

@@ -38,7 +38,16 @@ namespace Ecommerce_API.Features.Users
                         User user = request.user;
 
                         user.ID = maxID;
-                        int userId = await db.InsertDynamic("Users", user, trans) ?? 0;
+                        int userId = await db.InsertDynamic("Users", new{
+
+                            name=user.Name,
+                            username=user.Username,
+                            phone=user.Phone,
+                            password=user.Password,
+                            email=user.Email,
+                            mobile=user.Mobile
+
+                        }, trans) ?? 0;
 
                         if (userId > 0)
                         {

@@ -17,6 +17,7 @@ namespace Ecommerce_API.Middlewares
         private static string[] WhitelistEndpoints = new[]
         {
             "/api/auth/",
+            "/api/user/adduser"
         };
 
         public AuthenticationMiddleware(RequestDelegate next, IDatabase db)

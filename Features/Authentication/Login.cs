@@ -12,11 +12,15 @@ using Ecommerce_API.Models.Users;
 namespace Ecommerce_API.Features.Authentication
 {
     public class Login
-    {
+    {               
+
         public class Command : IRequest<User>
         {
-            public string Username { get; set; }
-            public string Password { get; set; }
+            public string Username { 
+                get; set; }
+                
+            public string Password { 
+                get; set; }
         }
 
         public class CommandValidator : AbstractValidator<Command>
